@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Dyrax",
   description: "Dyrax Meta Ads landing page",
