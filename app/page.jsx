@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Property Leads Direct on WhatsApp | Dyrax</title>
+  <title>Get Property Leads Direct on WhatsApp | Dyrax Marketing</title>
   <meta
     name="description"
     content="Generate serious buyer leads for plots, flats, villas and houses. Book your slot and get direct leads on WhatsApp."
@@ -493,7 +493,7 @@
 
   <header>
     <div class="container nav">
-      <div class="brand">DYRAX</div>
+      <div class="brand">DYRAX MARKETING</div>
       <div class="nav-right">
         <a class="phone-link" href="tel:+918115302970">Call: 8115302970</a>
         <a
@@ -633,7 +633,7 @@
           <div class="step-number">2</div>
           <h3>Complete Payment</h3>
           <p>
-            Visitor proceeds to the Razorpay payment step for booking confirmation.
+            Visitor proceeds to the payment step for booking confirmation.
           </p>
         </div>
 
@@ -739,7 +739,7 @@
   </section>
 
   <footer>
-    © 2026 Dyrax. All rights reserved.
+    © 2026 Dyrax Marketing. All rights reserved.
   </footer>
 </body>
 </html>
