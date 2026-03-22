@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Property Leads Direct on WhatsApp | Dyrax Marketing</title>
+  <title>Get Property Leads Direct on WhatsApp | Dyrax</title>
   <meta
     name="description"
     content="Generate serious buyer leads for plots, flats, villas and houses. Book your slot and get direct leads on WhatsApp."
@@ -739,7 +739,7 @@
   </section>
 
   <footer>
-    © 2026 Dyrax Marketing. All rights reserved.
+    © 2026 Dyrax. All rights reserved.
   </footer>
 </body>
 </html>
