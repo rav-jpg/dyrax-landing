@@ -1,251 +1,745 @@
-"use client";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Property Leads Direct on WhatsApp | Dyrax Marketing</title>
+  <meta
+    name="description"
+    content="Generate serious buyer leads for plots, flats, villas and houses. Book your slot and get direct leads on WhatsApp."
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-export default function DyraxLandingPage() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <header className="sticky top-0 z-30 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-          <div>
-            <h1 className="text-2xl font-extrabold tracking-tight">Dyrax</h1>
-            <p className="text-sm text-slate-400">Meta Ads Lead Generation for Real Estate</p>
-          </div>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .topbar {
+      width: 100%;
+      background: #111111;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    header {
+      padding: 18px 0;
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 800;
+      color: #111111;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .phone-link {
+      color: #111111;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-btn {
+      background: #111111;
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-block;
+      transition: 0.25s ease;
+    }
+
+    .nav-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 72px 0 56px;
+      background:
+        radial-gradient(circle at top right, rgba(37, 211, 102, 0.08), transparent 22%),
+        radial-gradient(circle at top left, rgba(0, 0, 0, 0.05), transparent 24%),
+        #ffffff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #f4f4f4;
+      color: #111111;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -1.2px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #25D366;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #333333;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 800;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #111111;
+      color: #ffffff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .btn-secondary {
+      background: #25D366;
+      color: #ffffff;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.22);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .mini-note {
+      font-size: 14px;
+      color: #555555;
+      margin-top: 2px;
+    }
+
+    .hero-card {
+      background: #111111;
+      color: #ffffff;
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.16);
+    }
+
+    .hero-card h3 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .hero-card p {
+      color: #d9d9d9;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .hero-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-list div {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .trust-row {
+      padding: 20px 0 10px;
+    }
+
+    .trust-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .trust-box {
+      background: #fafafa;
+      border: 1px solid #eeeeee;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .trust-box h4 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .trust-box p {
+      font-size: 14px;
+      color: #555555;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      max-width: 780px;
+      margin: 0 auto;
+      color: #555555;
+      font-size: 17px;
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ececec;
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #555555;
+      font-size: 15px;
+    }
+
+    .process-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: #111111;
+      color: #ffffff;
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: #dddddd;
+      font-size: 15px;
+    }
+
+    .offer-box {
+      background: linear-gradient(135deg, #111111, #1f1f1f);
+      color: #ffffff;
+      border-radius: 28px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+    }
+
+    .offer-box h2 {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .offer-box p {
+      color: #dddddd;
+      font-size: 17px;
+      max-width: 760px;
+    }
+
+    .offer-price {
+      background: #25D366;
+      color: #ffffff;
+      padding: 18px 24px;
+      border-radius: 20px;
+      font-size: 30px;
+      font-weight: 800;
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .faq {
+      display: grid;
+      gap: 16px;
+    }
+
+    .faq-item {
+      border: 1px solid #ececec;
+      border-radius: 18px;
+      padding: 22px;
+      background: #ffffff;
+    }
+
+    .faq-item h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      color: #555555;
+      font-size: 15px;
+    }
+
+    .final-cta {
+      text-align: center;
+      background: #fafafa;
+      border-top: 1px solid #eeeeee;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .final-cta h2 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .final-cta p {
+      font-size: 17px;
+      color: #555555;
+      max-width: 760px;
+      margin: 0 auto 26px;
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      text-align: center;
+      color: #666666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .trust-wrap,
+      .cards-3,
+      .process-wrap,
+      .offer-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .offer-box {
+        text-align: left;
+      }
+
+      .offer-price {
+        width: fit-content;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+        letter-spacing: -0.7px;
+      }
+
+      .section-title h2,
+      .offer-box h2,
+      .final-cta h2 {
+        font-size: 30px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .nav-btn {
+        width: 100%;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .phone-link {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    Book your slot and start receiving serious property enquiries directly on WhatsApp
+  </div>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">DYRAX</div>
+      <div class="nav-right">
+        <a class="phone-link" href="tel:+918115302970">Call: 8115302970</a>
+        <a
+          class="nav-btn"
+          href="https://wa.me/918115302970?text=Hi%20I%20want%20to%20run%20ads%20for%20my%20property"
+          target="_blank"
+        >
+          WhatsApp Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="tag">Meta Ads Lead Generation for Real Estate</div>
+        <h1>
+          Get Property Leads <span>Direct on WhatsApp</span>
+        </h1>
+        <p>
+          Generate serious enquiries for plots, flats, villas and houses with a clean, simple booking process.
+          Submit your details, complete your slot payment and continue on WhatsApp for fast confirmation.
+        </p>
+
+        <div class="cta-row">
           <a
-            href="https://wa.me/918115302970?text=Hi%20I%20want%20property%20leads"
-            className="rounded-xl bg-green-500 px-4 py-2 font-semibold transition hover:scale-105"
+            class="btn-primary"
+            href="https://forms.zoho.in/dyraxmarketing/form/LeadEntry"
+            target="_blank"
           >
-            WhatsApp
+            Book Slot ₹499
+          </a>
+
+          <a
+            class="btn-secondary"
+            href="https://wa.me/918115302970?text=Hi%20I%20want%20to%20run%20ads%20for%20my%20property"
+            target="_blank"
+          >
+            Only WhatsApp
           </a>
         </div>
-      </header>
 
-      <main>
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560518883-ce09059eeffa')] bg-cover bg-center opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-blue-900 opacity-90" />
+        <div class="mini-note">
+          Step flow: Zoho Form → Razorpay Payment → WhatsApp Confirmation
+        </div>
+      </div>
 
-          <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-24 lg:grid-cols-2">
-            <div>
-              <p className="inline-flex rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200">
-                Real Estate Buyer Lead System
-              </p>
+      <div class="hero-card">
+        <h3>Simple booking flow that feels clear and professional</h3>
+        <p>
+          A clean lead capture path helps reduce confusion and keeps interested clients moving to the next step.
+        </p>
 
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-6 text-4xl font-black leading-tight sm:text-5xl"
-              >
-                Get Qualified Property Buyers Directly on Your Phone
-              </motion.h2>
-
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                Dyrax helps property dealers, builders, and real estate agents run Facebook and Instagram Ads that bring buyer enquiries directly to WhatsApp. The goal is simple: better leads, more serious conversations, and more chances of site visits.
-              </p>
-
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="https://rzp.io/rzp/XI8LYlK"
-                  className="rounded-2xl bg-blue-600 px-6 py-4 font-bold shadow-lg transition hover:scale-105"
-                >
-                  Book Slot ₹499
-                </a>
-
-                <a
-                  href="https://wa.me/918115302970?text=Hi%20I%20want%20property%20leads"
-                  className="rounded-2xl border border-white/30 px-6 py-4 font-bold transition hover:bg-white/10"
-                >
-                  Chat on WhatsApp
-                </a>
-              </div>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-2xl font-black">24 Hrs</p>
-                  <p className="mt-1 text-sm text-slate-300">Fast setup support</p>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-2xl font-black">WhatsApp</p>
-                  <p className="mt-1 text-sm text-slate-300">Direct lead delivery</p>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-2xl font-black">₹499</p>
-                  <p className="mt-1 text-sm text-slate-300">Booking amount</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-center">
-              <div className="w-full max-w-xl rounded-3xl border border-white/10 bg-white/10 p-8 shadow-2xl backdrop-blur-xl">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">Why This Works</p>
-                <h3 className="mt-4 text-3xl font-black">A More Professional Way to Capture Property Buyers</h3>
-                <p className="mt-4 leading-8 text-slate-300">
-                  Instead of depending only on random calls or weak enquiries, you can use a focused Meta Ads system that attracts people interested in plots, flats, villas, and houses in your target market.
-                </p>
-                <ul className="mt-6 space-y-3 text-slate-200">
-                  <li>• Better buyer intent than random traffic</li>
-                  <li>• Faster response through WhatsApp</li>
-                  <li>• Cleaner ad flow for real estate offers</li>
-                  <li>• Useful for local property promotion</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-4 py-20">
-          <div className="mx-auto mb-10 max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">What You Get</p>
-            <h3 className="mt-3 text-3xl font-black">Clear Offer. Better Positioning. Stronger Trust.</h3>
-            <p className="mt-4 text-slate-300">
-              A client should immediately understand what you do, who it is for, and why they should contact you. This section builds that trust.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                title: "Qualified Buyer Leads",
-                text: "Campaign direction focused on attracting people who are actually interested in property purchase, not just empty clicks.",
-              },
-              {
-                title: "More Site Visit Enquiries",
-                text: "With better targeting and better positioning, you improve the chances of real conversations and visit-related enquiries.",
-              },
-              {
-                title: "Direct WhatsApp Responses",
-                text: "Interested people can reach you directly on WhatsApp, making follow-up easier and faster.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:scale-105"
-              >
-                <p className="text-xl font-bold">{item.title}</p>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-4 py-10">
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Who It Is For</p>
-              <h3 className="mt-3 text-2xl font-black">Built for Real Estate Businesses</h3>
-              <ul className="mt-5 space-y-3 text-slate-300">
-                <li>• Property dealers</li>
-                <li>• Builders and developers</li>
-                <li>• Real estate agents</li>
-                <li>• Plot, flat, villa, and house sellers</li>
-              </ul>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Common Problems</p>
-              <h3 className="mt-3 text-2xl font-black">Why Most Real Estate Promotion Fails</h3>
-              <ul className="mt-5 space-y-3 text-slate-300">
-                <li>• Low quality leads</li>
-                <li>• No proper buyer filtering</li>
-                <li>• Slow follow-up response</li>
-                <li>• Money spent without a clear system</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-5xl px-4 py-16">
-          <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-700 p-10 text-center shadow-xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-100">Limited Offer</p>
-            <h3 className="mt-3 text-3xl font-black">Book Your Slot – ₹499</h3>
-            <p className="mt-4 text-base leading-8 text-white/90">
-              This booking is for service onboarding and initial setup guidance. Ideal if you want to start building a more serious buyer lead system for your real estate business.
-            </p>
-            <div className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/90">
-              <p>Best for local property promotion and Meta Ads support.</p>
-              <p className="mt-2">Ad spend is paid separately by the client. Booking fee is non-refundable.</p>
-            </div>
-            <a
-              href="https://rzp.io/rzp/XI8LYlK"
-              className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-bold text-black transition hover:scale-105"
-            >
-              Pay Now
-            </a>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-4 py-20">
-          <div className="mx-auto mb-10 max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">How It Works</p>
-            <h3 className="mt-3 text-3xl font-black">Simple 4-Step Flow</h3>
-          </div>
-          <div className="grid gap-6 text-center md:grid-cols-4">
-            {[
-              {
-                title: "1. Book",
-                text: "Pay the booking fee and secure your setup slot.",
-              },
-              {
-                title: "2. Setup",
-                text: "We guide the Meta Ads structure for your property offer.",
-              },
-              {
-                title: "3. Leads",
-                text: "Buyer enquiries start reaching you directly on WhatsApp.",
-              },
-              {
-                title: "4. Close",
-                text: "You handle follow-up, site visits, and deal conversations.",
-              },
-            ].map((step) => (
-              <div
-                key={step.title}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6"
-              >
-                <p className="text-xl font-bold">{step.title}</p>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{step.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="bg-gradient-to-r from-blue-700 to-black py-20 text-center">
-          <div className="mx-auto max-w-4xl px-4">
-            <h3 className="text-4xl font-black">Start Getting Better Property Buyer Leads Today</h3>
-            <p className="mt-4 text-base leading-8 text-slate-200">
-              If you want a cleaner, stronger, and more professional way to attract local property buyers through Facebook and Instagram Ads, book your slot now or chat first on WhatsApp.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <a
-                href="https://rzp.io/rzp/XI8LYlK"
-                className="rounded-2xl bg-white px-6 py-4 font-bold text-black"
-              >
-                Book ₹499
-              </a>
-              <a
-                href="https://wa.me/918115302970?text=Hi%20I%20want%20property%20leads"
-                className="rounded-2xl border border-white px-6 py-4"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="py-8 text-center text-sm leading-7 text-slate-400">
-        Dyrax | 8115302970
-        <br />
-        Meta Ads lead generation service for real estate businesses.
-        <br />
-        ₹499 non-refundable booking fee. No guarantee of sales. Ad spend is paid separately by the client.
-      </footer>
-
-      <a
-        href="https://wa.me/918115302970?text=Hi%20I%20want%20property%20leads"
-        className="fixed bottom-5 right-5 rounded-full bg-green-500 px-5 py-3 font-bold shadow-xl"
-      >
-        Chat
-      </a>
+        <div class="hero-list">
+          <div>✔ Direct lead handling on WhatsApp</div>
+          <div>✔ Suitable for plots, flats, villas and houses</div>
+          <div>✔ Clear booking action with payment step</div>
+          <div>✔ Fast inquiry-to-chat experience</div>
+        </div>
+      </div>
     </div>
-  );
-}
+  </section>
+
+  <div class="trust-row">
+    <div class="container trust-wrap">
+      <div class="trust-box">
+        <h4>Clear Process</h4>
+        <p>Visitors know exactly what happens next before they click.</p>
+      </div>
+      <div class="trust-box">
+        <h4>Mobile Friendly</h4>
+        <p>Built to look strong and clean on mobile screens.</p>
+      </div>
+      <div class="trust-box">
+        <h4>Fast Action</h4>
+        <p>One path for booking, one path for direct WhatsApp conversation.</p>
+      </div>
+      <div class="trust-box">
+        <h4>Professional Layout</h4>
+        <p>Simple design focused on trust, clarity and conversion.</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Who this is for</h2>
+        <p>
+          This page is suitable for property sellers, builders, brokers and real estate teams who want inquiries to come directly on WhatsApp.
+        </p>
+      </div>
+
+      <div class="cards-3">
+        <div class="card">
+          <h3>Plots</h3>
+          <p>
+            Use ads and booking flow for plot sales where fast inquiry handling matters.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Flats & Houses</h3>
+          <p>
+            Capture buyers who want details, budget discussion and direct conversation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Villas & Premium Projects</h3>
+          <p>
+            Keep the landing page clean, premium and action-focused for high-value leads.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fafafa;">
+    <div class="container">
+      <div class="section-title">
+        <h2>How the process works</h2>
+        <p>
+          The visitor follows a simple path from interest to confirmation without extra confusion.
+        </p>
+      </div>
+
+      <div class="process-wrap">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Submit Form</h3>
+          <p>
+            Visitor enters details in the Zoho form so the lead is captured properly.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Complete Payment</h3>
+          <p>
+            Visitor proceeds to the Razorpay payment step for booking confirmation.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Redirect to WhatsApp</h3>
+          <p>
+            After payment, the user is sent to WhatsApp for direct communication.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Fast Follow-up</h3>
+          <p>
+            You continue the conversation, confirm the requirement and move ahead faster.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="offer-box">
+        <div>
+          <h2>Book your slot and move serious buyers into conversation</h2>
+          <p>
+            Keep the journey simple: form, payment, WhatsApp. A direct process helps reduce drop-off and gives visitors one clear next step.
+          </p>
+        </div>
+        <div class="offer-price">₹499<br /><span style="font-size:14px;font-weight:600;">Book Slot</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fafafa;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently asked questions</h2>
+        <p>
+          Important points users usually want to know before clicking the main button.
+        </p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h3>What happens after I click Book Slot?</h3>
+          <p>
+            You will first open the form, then proceed to the payment step, and after that continue on WhatsApp for confirmation.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I directly chat on WhatsApp without booking?</h3>
+          <p>
+            Yes. The WhatsApp button is available for users who want to start with direct conversation first.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is this page mobile friendly?</h3>
+          <p>
+            Yes. The layout is designed to work cleanly on mobile, which is where most ad traffic usually comes from.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Which property types can this support?</h3>
+          <p>
+            Plots, flats, villas, houses and similar real estate projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Ready to start?</h2>
+      <p>
+        Choose the path that suits your visitor best. Book the slot with the full process, or start directly on WhatsApp.
+      </p>
+
+      <div class="cta-row" style="justify-content:center;">
+        <a
+          class="btn-primary"
+          href="https://forms.zoho.in/dyraxmarketing/form/LeadEntry"
+          target="_blank"
+        >
+          Book Slot ₹499
+        </a>
+
+        <a
+          class="btn-secondary"
+          href="https://wa.me/918115302970?text=Hi%20I%20want%20to%20run%20ads%20for%20my%20property"
+          target="_blank"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Dyrax Marketing. All rights reserved.
+  </footer>
+</body>
+</html>
