@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Payment Success</title>
+
+<script>
+setTimeout(()=>{
+window.location.href="https://wa.me/918115302970?text=I%20have%20paid%20₹499%20for%20strategy%20call.%20Please%20confirm%20my%20slot.";
+},3000);
+</script>
+
+</head>
+
+<body style="background:#061a33;color:white;text-align:center;padding-top:100px;font-family:Arial;">
+
+<h1>Payment Successful ✅</h1>
+<p>Redirecting to WhatsApp...</p>
+
+</body>
+</html>
