@@ -3,144 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dyrax | Real Estate Meta Ads Agency</title>
+
+<title>Dyrax Marketing | Real Estate Lead Generation Agency</title>
+<meta name="description" content="High performance Meta Ads system for real estate lead generation. Verified buyer leads, ROI focused campaigns.">
 
 <style>
-/* ===== GLOBAL ===== */
+
+/* ================= GLOBAL ================= */
 body{
-  margin:0;
-  font-family:Arial;
-  background:#061a33;
-  color:white;
+margin:0;
+font-family:Arial;
+background:#061a33;
+color:white;
+scroll-behavior:smooth;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 25px;
-  background:#041225;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 25px;
+background:#041225;
+position:sticky;
+top:0;
+z-index:10;
 }
 
 .logo{
-  color:#00ff88;
-  font-weight:bold;
-  font-size:20px;
+color:#00ff88;
+font-weight:bold;
+font-size:20px;
 }
 
-nav a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
-  font-size:14px;
-}
-
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 .hero{
-  text-align:center;
-  padding:80px 20px;
+text-align:center;
+padding:100px 20px;
+background:linear-gradient(#061a33,#081f3f);
 }
 
 .hero h1{
-  font-size:40px;
-  color:#00ff88;
-  margin-bottom:10px;
+font-size:44px;
+color:#00ff88;
+animation:fadeUp 1s ease-in-out;
 }
 
 .hero p{
-  color:#cfd8e3;
-  font-size:18px;
+color:#cfd8e3;
+font-size:18px;
+max-width:700px;
+margin:auto;
 }
 
-/* ===== BUTTONS ===== */
 .btn{
-  display:inline-block;
-  padding:12px 18px;
-  margin:10px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:bold;
+display:inline-block;
+padding:12px 18px;
+margin:10px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
 }
 
-.green{
-  background:#00ff88;
-  color:black;
+.btn:hover{
+transform:scale(1.05);
 }
 
-.dark{
-  background:#0c2a4f;
-  color:white;
-}
+.green{background:#00ff88;color:black;}
+.dark{background:#0c2a4f;color:white;}
 
-/* ===== SECTIONS ===== */
+/* ================= SECTION ================= */
 section{
-  padding:60px 20px;
-  text-align:center;
+padding:70px 20px;
+text-align:center;
 }
 
-/* ===== GRID ===== */
+/* ================= GRID ================= */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-  max-width:1000px;
-  margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
 }
 
-/* ===== CARD ===== */
 .card{
-  background:#0f2f57;
-  padding:20px;
-  border-radius:10px;
-  transition:0.3s;
+background:#0f2f57;
+padding:22px;
+border-radius:12px;
+transition:0.3s;
+border:1px solid rgba(0,255,136,0.2);
 }
 
 .card:hover{
-  transform:scale(1.03);
+transform:translateY(-6px);
+box-shadow:0 0 18px #00ff88;
 }
 
-/* ===== FLOW ===== */
-.flow{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-  margin-top:20px;
+/* ================= ANIMATION ================= */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
 }
 
-.step{
-  background:#0f2f57;
-  padding:15px;
-  border-radius:10px;
-  min-width:150px;
+/* ================= TRUST TITLE ================= */
+.glow{
+color:#00ff88;
+text-shadow:0 0 12px #00ff88;
 }
 
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#041225;
-  font-size:14px;
+/* ================= STATS ================= */
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
 }
 
-footer a{
-  color:#00ff88;
-  text-decoration:none;
+.stats div{
+background:#0f2f57;
+padding:18px;
+border-radius:10px;
+min-width:160px;
 }
 
-/* ===== WHATSAPP FLOAT ===== */
+/* ================= CTA FLOAT ================= */
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:12px 16px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:14px 16px;
+border-radius:50px;
+color:white;
+font-weight:bold;
+text-decoration:none;
 }
+
+/* ================= FOOTER ================= */
+footer{
+background:#041225;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
 </style>
 
 </head>
@@ -149,104 +157,117 @@ footer a{
 
 <!-- HEADER -->
 <header>
-  <div class="logo">DYRAX AGENCY</div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="#results">Results</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<div class="logo">DYRAX MARKETING</div>
 </header>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Get High Quality Real Estate Leads</h1>
-  <p>We run Meta Ads system that brings real buyers, not fake leads</p>
 
-  <a class="btn green" href="https://forms.zoho.in/dyraxmarketing/form/LeadEntry/builder">
-    Free Audit
-  </a>
+<h1>High Quality Real Estate Leads System</h1>
 
-  <a class="btn dark"
-     href="https://pages.razorpay.com/pl_SGsCU0kkVWBWYq/view"
-     onclick="setTimeout(()=>window.location='success.html',3000)">
-    Book ₹499 Strategy Call
-  </a>
+<p>
+We build performance-driven Meta Ads funnels that generate verified property buyers
+with optimized cost per lead and scalable ROI systems.
+</p>
+
+<a class="btn green" href="https://forms.zoho.in/dyraxmarketing/form/LeadEntry" target="_blank">
+Get Free Audit
+</a>
+
+<a class="btn dark" href="https://pages.razorpay.com/pl_SGsCU0kkVWBWYq/view">
+Book ₹499 Strategy Call
+</a>
+
 </div>
-
-<!-- PROCESS VISUAL -->
-<section id="process">
-  <h2>Our Funnel System</h2>
-
-  <div class="flow">
-    <div class="step">Meta Ads</div>
-    <div class="step">Landing Page</div>
-    <div class="step">Lead Form</div>
-    <div class="step">WhatsApp</div>
-    <div class="step">Call Close</div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>What We Do</h2>
-
-  <div class="grid">
-    <div class="card">Meta Ads Strategy</div>
-    <div class="card">High Intent Targeting</div>
-    <div class="card">Landing Page Optimization</div>
-    <div class="card">WhatsApp Automation</div>
-  </div>
-</section>
-
-<!-- RESULTS -->
-<section id="results">
-  <h2>Expected Results</h2>
-
-  <div class="grid">
-    <div class="card">100–300 Leads / Month</div>
-    <div class="card">₹50–₹150 Cost Per Lead</div>
-    <div class="card">High ROI Growth</div>
-  </div>
-</section>
 
 <!-- TRUST -->
 <section>
-  <h2>Why Clients Trust Us</h2>
+<h2 class="glow">Why Builders Trust Dyrax</h2>
 
-  <div class="grid">
-    <div class="card">Verified Buyer Leads</div>
-    <div class="card">Transparent Process</div>
-    <div class="card">Real Estate Only Focus</div>
-  </div>
+<div class="grid">
+
+<div class="card">✔ Verified Real Buyer Leads Only</div>
+<div class="card">✔ Real Estate Exclusive Strategy</div>
+<div class="card">✔ Transparent Reporting System</div>
+<div class="card">✔ High Conversion Funnel Design</div>
+<div class="card">✔ ROI Focused Campaigns</div>
+
+</div>
+</section>
+
+<!-- SYSTEM -->
+<section>
+<h2>Our Growth System</h2>
+
+<div class="grid">
+
+<div class="card">Meta Ads Targeting Engine</div>
+<div class="card">Landing Page Conversion Funnel</div>
+<div class="card">Zoho Lead Capture System</div>
+<div class="card">WhatsApp Follow-up Flow</div>
+<div class="card">Call Closing Strategy</div>
+
+</div>
+</section>
+
+<!-- CASE STUDY -->
+<section>
+<h2 class="glow">Case Study</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Before</h3>
+<p>No consistent leads</p>
+<p>High cost per enquiry</p>
+<p>Low conversion rate</p>
+</div>
+
+<div class="card">
+<h3>After</h3>
+<p>200–300 leads/month</p>
+<p>₹50–₹120 CPL</p>
+<p>High quality buyers</p>
+</div>
+
+<div class="card">
+<h3>Impact</h3>
+<p>2X–6X revenue growth</p>
+<p>Better closing ratio</p>
+<p>Scalable ad system</p>
+</div>
+
+</div>
+</section>
+
+<!-- STATS -->
+<section>
+<h2>Performance Results</h2>
+
+<div class="stats">
+<div>200+ Leads / Month</div>
+<div>₹50–₹120 CPL</div>
+<div>High ROI Growth</div>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Start Now</h2>
+<section>
+<h2>Start Your System</h2>
 
-  <a class="btn green" href="https://wa.me/918115302970">WhatsApp</a>
-  <a class="btn dark" href="https://forms.zoho.in/dyraxmarketing/form/LeadEntry/builder">Lead Form</a>
-</section>
+<a class="btn green" href="https://wa.me/918115302970">WhatsApp</a>
+<a class="btn dark" href="https://forms.zoho.in/dyraxmarketing/form/LeadEntry">Fill Form</a>
 
-<!-- PRIVACY -->
-<section style="background:#0b1f3a;">
-<h3>Privacy Policy</h3>
-<p>We collect basic contact details only for providing marketing services. Data is never sold or misused.</p>
-</section>
+<p>dyraxmarketing@zohomail.in</p>
 
-<!-- TERMS -->
-<section style="background:#0c2547;">
-<h3>Terms & Conditions</h3>
-<p>₹499 booking fee is non-refundable. We provide marketing services only, no sales guarantee.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-© Dyrax Marketing | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+© Dyrax Marketing | Real Estate Lead Generation Agency
 </footer>
 
-<!-- WHATSAPP FLOAT -->
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/918115302970">WhatsApp</a>
 
 </body>
